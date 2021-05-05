@@ -1,0 +1,32 @@
+.Form-create-todo {
+	width: 70%;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Form-create-todo .Form-img-create-todo {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.Form-create-todo .btn-create-todo {
+	margin-left: 10px;
+	border-radius: 50px;
+	width: 50px;
+	height: 50px;
+}
+
+.Form-create-todo input {
+	padding: 15px;
+	font-size: 18px;
+	padding-left: 50px;
+	border-radius: 15px;
+	border: solid 2px var(--bg-primary);
+	width: 100%;
+}
+
+.Form-create-todo input:focus {
+}
