@@ -1,0 +1,63 @@
+.list-activities {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.item-activities {
+	list-style: none;
+	padding: 20px;
+	transition: 0.3s;
+	height: 150px;
+	width: 350px;
+	border: 1px solid var(--bg-primary);
+	margin: 15px;
+	border-radius: 15px;
+	background: #fff;
+}
+
+.item-activities:hover {
+	box-shadow: 0px 3px 5px 0px rgba(153, 153, 153, 0.479);
+}
+
+.description-activities {
+	height: 80%;
+}
+
+.option-activities {
+	display: flex;
+	justify-content: flex-end;
+	opacity: 0;
+	transition: 0.3s;
+}
+
+.option-activities .btn-delete,
+.btn-edit {
+	border: none;
+	border-radius: 10px;
+	padding: 5px 10px;
+	margin: 0 3px;
+}
+
+.option-activities .btn-delete {
+	background-color: rgba(248, 94, 94);
+	color: #fff;
+}
+
+.option-activities .btn-edit {
+	background-color: rgb(86, 158, 80);
+	color: #fff;
+}
+
+.option-activities .btn-delete:hover {
+	background-color: rgb(253, 63, 63);
+}
+.option-activities .btn-edit:hover {
+	background-color: rgb(52, 126, 45);
+}
+
+.item-activities:hover > .option-activities {
+	opacity: 1;
+}

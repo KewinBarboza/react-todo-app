@@ -11,7 +11,7 @@ export default function App() {
 
 	const activity = {
 		id: '',
-		activity: false,
+		activity: '',
 	};
 
 	useEffect(() => {
@@ -23,18 +23,22 @@ export default function App() {
 		setLoading(false);
 	}, []);
 
+	useEffect(() => {
+		localStorage.setItem('@activity', JSON.stringify(listActivity));
+	}, [listActivity]);
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		e.target.childNodes[1].value = '';
 
 		setListActivity([...listActivity, activity]);
-		localStorage.setItem('@activity', JSON.stringify(listActivity));
 	};
 
 	const handleChange = (e) => {
 		activity.id = uniqid();
 		activity.activity = e.target.value;
 	};
+
 	return (
 		<div className="App">
 			<header className="App-header">
@@ -42,12 +46,7 @@ export default function App() {
 				<InputCreateTodo onSubmit={handleSubmit} handleChange={handleChange} />
 			</header>
 
-			<main className="App-main">
-				{/* {loading ? <h1>Cargando notas</h1> : console.log(listActivity)} */}
-				{loading ? <h1>Cargando notas</h1> : <ListActivity listActivity={listActivity} />}
-				{/* <ListActivity listActivity={listActivity} /> */}
-				{/* {console.log(!loading && listActivity)} */}
-			</main>
+			<main className="App-main">{loading ? <h1>Cargando notas</h1> : <ListActivity activities={listActivity} />}</main>
 		</div>
 	);
 }

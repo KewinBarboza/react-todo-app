@@ -24,9 +24,11 @@
 	font-size: 18px;
 	padding-left: 50px;
 	border-radius: 15px;
-	border: solid 2px var(--bg-primary);
+	border: solid 1px #ffffff;
 	width: 100%;
 }
 
-.Form-create-todo input:focus {
+.Form-create-todo input:focus-visible {
+	outline-offset: 0px;
+	border-radius: 15px;
 }
