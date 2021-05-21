@@ -42,17 +42,17 @@
 }
 
 .option-activities .btn-delete {
-	background-color: rgba(248, 94, 94);
-	color: #fff;
+	background-color: rgba(255, 129, 129, 0.589);
+	color: rgb(255, 89, 89);
 }
 
 .option-activities .btn-edit {
-	background-color: rgb(86, 158, 80);
-	color: #fff;
+	background-color: rgb(172, 228, 167);
+	color: rgb(69, 216, 76);
 }
 
 .option-activities .btn-delete:hover {
-	background-color: rgb(253, 63, 63);
+	background-color: rgba(255, 104, 104, 0.822);
 }
 .option-activities .btn-edit:hover {
 	background-color: rgb(52, 126, 45);
@@ -60,4 +60,11 @@
 
 .item-activities:hover > .option-activities {
 	opacity: 1;
+}
+
+.description-activities {
+	border: none;
+	resize: none;
+	height: 80%;
+	width: 100%;
 }
